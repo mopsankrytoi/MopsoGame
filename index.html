@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="theme-color" content="#071a36">
+<title>MopsoGame</title>
+<link rel="stylesheet" href="/style.css">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="logo">M</div>
+    <div><div class="brand">MopsoGame</div><div class="tag">PLAY • COMPLETE • LEVEL UP</div></div>
+    <div class="online">● ONLINE</div>
+  </header>
+
+  <section class="hero">
+    <div class="eyebrow">ТВОЁ ИГРОВОЕ ПРОСТРАНСТВО</div>
+    <h1>Привет, <span id="hello">игрок</span>! 👋</h1>
+    <p>Играй, выполняй задания и открывай новые уровни.</p>
+    <div class="stats">
+      <div><small>ТВОИ ОЧКИ</small><strong id="points">0</strong><em>MP</em></div>
+      <div><small>ТВОЙ УРОВЕНЬ</small><strong id="level">1</strong><em>LEVEL</em></div>
+    </div>
+    <div class="progress"><div id="progressbar"></div></div>
+    <small class="progress-label" id="progresslabel">0 / 100 MP до следующего уровня</small>
+  </section>
+
+  <nav class="tabs">
+    <button class="tab active" data-page="home">⌂<span>Главная</span></button>
+    <button class="tab" data-page="games">🎮<span>Игра</span></button>
+    <button class="tab" data-page="tasks">🎯<span>Задания</span></button>
+    <button class="tab" data-page="profile">👤<span>Профиль</span></button>
+  </nav>
+
+  <main>
+    <section class="page show" id="page-home">
+      <div class="section-title">Твой прогресс <span>✨</span></div>
+      <div class="feature-card">
+        <div class="feature-icon">🎮</div>
+        <div><b>Время играть!</b><p>Каждое нажатие приносит тебе 1 MP.</p></div>
+        <button class="small-btn" data-go="games">Играть</button>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <div><b>Новые задания</b><p>Выполняй задания и получай награды.</p></div>
+        <button class="small-btn" data-go="tasks">Открыть</button>
+      </div>
+      <div class="notice"><span>🔔</span><div><b>Уведомления включены</b><p>Новости MopsoGame будут приходить в Telegram.</p></div></div>
+    </section>
+
+    <section class="page" id="page-games">
+      <div class="section-title">Мини-игра <span>⚡</span></div>
+      <div class="game-card">
+        <div class="orb">⚡</div>
+        <h2>MP Clicker</h2>
+        <p>Нажимай на кнопку и собирай игровые очки!</p>
+        <div class="score"><span id="gamepoints">0</span><small>MP ВСЕГО</small></div>
+        <button class="tap-btn" id="tap">НАЖМИ И ПОЛУЧИ +1 MP</button>
+        <small class="hint">Очки сохраняются в твоём профиле.</small>
+      </div>
+    </section>
+
+    <section class="page" id="page-tasks">
+      <div class="section-title">Задания <span>🏆</span></div>
+      <div id="tasklist" class="task-list"><div class="loading">Загружаем задания...</div></div>
+    </section>
+
+    <section class="page" id="page-profile">
+      <div class="section-title">Мой профиль <span>👤</span></div>
+      <div class="profile-card">
+        <div class="avatar" id="avatar">M</div>
+        <h2 id="profile-name">Игрок MopsoGame</h2>
+        <p id="username">@player</p>
+        <div class="profile-stats">
+          <div><b id="profile-points">0</b><small>ОЧКИ</small></div>
+          <div><b id="profile-level">1</b><small>УРОВЕНЬ</small></div>
+        </div>
+      </div>
+      <div class="notice"><span>💙</span><div><b>Спасибо, что играешь!</b><p>Твой прогресс хранится в MopsoGame.</p></div></div>
+    </section>
+  </main>
+  <footer>MopsoGame © 2026 <span>Сделано для игроков 💙</span></footer>
+</div>
+<div id="toast" class="toast"></div>
+<script src="/app.js"></script>
+</body>
+</html>
